@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: rgb(29, 29, 29);
+}
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin: 10px;
+    margin-left: 20px;
+
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.social-icon {
+    width: 30px;
+}
+
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    color: white;
+    
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.presenter-image {
+    width: 80%; /* Ajuste o tamanho da imagem conforme necessário */
+    max-width: 600px; /* Limita o tamanho máximo da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.text-container {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.text-container h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.cta-button:hover {
+    background-color: red;
+}
+
+.metodo-viver-text {
+    color: red;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .text-container {
+        padding: 10px;
+    }
+
+    .text-container {
+        padding-left: 0;
+    }
+
+    .presenter-image {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.quote-img {
+    width: 500px; 
+    height: auto; 
+    overflow: hidden; 
+    margin: auto;
+}
+
+.quote-img img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.mentorship-card {
+    background-color: #FFD700; 
+    border-radius: 10px; 
+    padding: 20px; 
+    color: black;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
+    margin-top: 20px;
+    max-width: 1300px;
+    margin-left: auto; 
+    margin-right: auto; 
+    transition: box-shadow 0.3s;
+
+}
+
+.mentorship-details {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.mentorship-image {
+    max-width: 300px; 
+    margin-right: 20px; 
+}
+
+.mentorship-description {
+    max-width: 400px; 
+    margin-left: 20px; 
+}
+
+.cta-button {
+    background-color: black; 
+    color: #FFD700; 
+    border: 2px solid #FFD700; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.cta-button:hover {
+    background-color: #FFD700; 
+    color: #fff; 
+}
+
+.mentorships-cards {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.mentorship-all-cards {
+    background-color: #333; 
+    color: #fff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 15px; 
+    width: calc(30% - 30px);
+    min-height: 200px; /* Aumenta a altura mínima dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    display: block; /* Faz o link ocupar todo o espaço do card */
+    color: inherit; /* Mantém a cor do texto igual à cor do card */
+    text-decoration: none; /* Remove sublinhado do texto */
+    height: 100%; /* Garante que o link ocupe toda a altura do card */
+}
+
+@media (max-width: 768px) {
+    .mentorship-all-cards {
+        width: calc(45% - 30px); /* 2 por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .mentorship-all-cards {
+        width: 100%; /* 1 por linha em telas muito pequenas */
+    }
+}
+.mentorship-logo {
+    width: 100%; /* A imagem ocupará toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    
+
+}
+
+.mentorship-all-cards:hover {
+    background-color: #444; /* Altera a cor do fundo no hover */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.mentorship-all-cards a {
+    display: block; /* Faz o link ocupar todo o espaço do card */
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove sublinhado do texto */
+    height: 100%; /* Garante que o link ocupe toda a altura do card */
+}
+
+.about-section {
+    padding: 50px;
+
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    text-align: left;
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: white;
+}
+
+.about-quote {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.cta-button {
+
+
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-images {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: rgb(29, 29, 29);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
+
+.about-container {
+    display: flex; /* Alinha a imagem e o texto lado a lado */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    max-width: 1100px; /* Largura máxima do container */
+    margin: 20px auto; /* Centraliza o container */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.about-image {
+    width: 400px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Cantos arredondados na imagem */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+}
+
+.about-text {
+    text-align: justify; /* Justifica o texto */
+    color: white
+}
+
+.fade-in {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Move o elemento para baixo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animação de transição */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+
+
+
+
+
+
+
+
