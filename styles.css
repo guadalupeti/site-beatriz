@@ -442,6 +442,9 @@ body {
     transform: translateY(0); /* Retorna à posição original */
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 
