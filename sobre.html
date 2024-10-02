@@ -25,23 +25,29 @@
             </div>
         </div>
     </div>
-    <div class="about-container">
-        <img src="beatriz_2.jpeg" alt="Beatriz Bouzada" class="about-image">
-        <div class="about-text">
-            <p>Beatriz Bouzada</p>
-            <p>Psicóloga, Neuropsicóloga, Especialista em Gestão de Pessoas e Mentora do Método VIVER</p>
-                <br>
-            <p>Formada em Psicologia desde 1996, com pós-graduação em Gestão Estratégica de Recursos Humanos (2002) e Neuropsicologia (2023), Beatriz acumula 25 anos de experiência na área de Gestão de Pessoas. Ao longo da sua carreira, atuou em diversas empresas de Juiz de Fora e Região, desenvolvendo e implementando estratégias de treinamento e desenvolvimento, com foco em processos, qualidade e bem-estar dos colaboradores.</p>
-            <br>
-            <p>Durante sua estadia nos EUA entre 2002 e 2005, concluiu especialização em Planejamento Estratégico, expandindo suas habilidades para atuar na área empresarial.</p>
-            <br>
-            <p>Especialista em TDAH em adultos, Beatriz realiza psicoterapia online individual e em grupo, com foco em proporcionar suporte emocional e ferramentas práticas para o autodesenvolvimento.</p>
-            <br>
-            <p>Atualmente, é Mentora do Método VIVER, um programa que promove autoconhecimento, superação de barreiras e equilíbrio emocional para quem busca sucesso pessoal e profissional.</p>
-            <br>
-            <p>O Método VIVER é a chave para transformar sua vida em uma experiência plena, integrando mente, corpo e emoções para viver com propósito e realização.</p>
+    <div class="container-sobre fade-in">
+        <img src="beatriz_2.jpeg" alt="Beatriz Bouzada" class="imagem-sobre">
+        <div class="texto-sobre">
+            <h2>Beatriz Bouzada</h2>
+            <h3>Psicóloga, Neuropsicóloga, Especialista em Gestão de Pessoas e Mentora do Método VIVER</h3>
+            <p>
+                Formada em Psicologia desde 1996, com pós-graduação em Gestão Estratégica de Recursos Humanos (2002) e Neuropsicologia (2023), Beatriz acumula 25 anos de experiência na área de Gestão de Pessoas. Ao longo da sua carreira, atuou em diversas empresas de Juiz de Fora e Região, desenvolvendo e implementando estratégias de treinamento e desenvolvimento, com foco em processos, qualidade e bem-estar dos colaboradores.
+            </p>
+            <p>
+                Durante sua estadia nos EUA entre 2002 e 2005, concluiu especialização em Planejamento Estratégico, expandindo suas habilidades para atuar na área empresarial.
+            </p>
+            <p>
+                Especialista em TDAH em adultos, Beatriz realiza psicoterapia online individual e em grupo, com foco em proporcionar suporte emocional e ferramentas práticas para o autodesenvolvimento.
+            </p>
+            <p>
+                Atualmente, é Mentora do Método VIVER, um programa que promove autoconhecimento, superação de barreiras e equilíbrio emocional para quem busca sucesso pessoal e profissional.
+            </p>
+            <p>
+                O Método VIVER é a chave para transformar sua vida em uma experiência plena, integrando mente, corpo e emoções para viver com propósito e realização.
+            </p>
         </div>
     </div>
+    
     
 
     <footer class="footer">
@@ -70,5 +76,24 @@
             <p>&copy; 2024 Beatriz Bouzada | Todos os direitos reservados</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade-in'); // Seleciona todos os elementos com a classe 'fade-in'
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // Adiciona a classe 'visible' quando entra na visualização
+                        observer.unobserve(entry.target); // Para observar o elemento após a animação
+                    }
+                });
+            });
+    
+            elements.forEach(element => {
+                observer.observe(element); // Observa cada elemento
+            });
+        });
+    </script>
 </body>
 </html>

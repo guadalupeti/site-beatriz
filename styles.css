@@ -51,6 +51,7 @@ body {
     padding: 20px;
     height: 100vh; /* Ocupa toda a altura da tela */
     color: white;
+    z-index: 1;
     
 }
 
@@ -65,6 +66,8 @@ body {
     max-width: 600px; /* Limita o tamanho máximo da imagem */
     border-radius: 10px; /* Bordas arredondadas */
 }
+
+
 
 .text-container {
     flex: 1;
@@ -127,11 +130,85 @@ body {
     height: auto; 
     overflow: hidden; 
     margin: auto;
+    z-index: 0; /* Coloca a imagem abaixo da hero section */
+    clear: both;
+    display: flex; /* Adiciona flexbox para facilitar a centralização */
+    justify-content: center
+
 }
 
 .quote-img img {
     max-width: 100%;
     height: auto; 
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em; /* Ajusta o texto para telas intermediárias */
+    }
+
+    .hero-section p {
+        font-size: 1.3em;
+    }
+
+    .quote-img {
+        margin-top: 30px; /* Aumenta o espaçamento entre a hero e a imagem */
+    }
+
+    .quote-img img {
+        max-width: 90%;
+    }
+}
+
+/* Media query para telas mobile (dispositivos menores que 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .quote-img {
+        margin-top: 40px;
+        display: flex; /* Garante que o flexbox funcione também em telas menores */
+        justify-content: center; /* Centraliza a imagem */
+    }
+
+    .quote-img img {
+        max-width: 80%;
+    }
+}
+
+/* Media query para telas muito pequenas (menos de 480px) */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .quote-img {
+        margin-top: 50px;
+        display: flex; /* Mantém o flexbox */
+        justify-content: center; /* Garante a centralização */
+    }
+
+    .quote-img img {
+        max-width: 70%;
+        margin-right: 100px;
+    }
 }
 
 .mentorship-card {
@@ -446,6 +523,202 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Estilos gerais da seção */
+.sessao-mentoria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.imagem-mentoria {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.imagem-mentoria img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.informacoes-mentoria {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.informacoes-mentoria h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.informacoes-mentoria p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estilos do botão de contato */
+.botao-contato {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #28a745;
+    background-color: transparent;
+    color: #28a745;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icone-whatsapp {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Estilo geral da seção sobre */
+.container-sobre {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px ;
+    padding: 20px;
+}
+
+.imagem-sobre {
+    width: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.texto-sobre {
+    flex: 1;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.texto-sobre h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.texto-sobre h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.texto-sobre p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.texto-sobre p:last-child {
+    margin-bottom: 0;
+}
+
+.tabel {
+    text-align: center;
+}
+
+.tabel img {
+    width: 500px;
+    height: auto;
+}
+
+/* Sessão "O que é uma mentoria?" */
+/* Estilos para a sessão de mentoria */
+.oq-mentoria {
+    padding: 60px 20px;
+    margin: 40px auto; /* Centraliza o contêiner horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    max-width: 800px; /* Define uma largura máxima para que o conteúdo não se expanda demais */
+
+}
+
+.oq-mentoria h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.oq-mentoria p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.texto-vermelho {
+    color: red;
+}
+
+.highlighted-mentorship {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .mentorship-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mentorship-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100px;
+    }
+
+    .mentorship-description {
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlighted-mentorship {
+        padding: 10px;
+    }
+
+    .mentorship-card {
+        margin: 10px;
+    }
+
+    .mentorship-image {
+        max-width: 80px;
+    }
+}
 
 
 

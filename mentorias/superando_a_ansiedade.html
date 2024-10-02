@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatriz Bouzada</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="inner-header">
+            <!-- Logo -->
+            <a href="../index.html"> 
+                <img src="../metodo_viver.png" alt="Logo" class="logo">
+            </a>
+            
+            
+            <!-- Redes sociais -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/beatrizbouzada.psi/" target="_blank">
+                    <img src="../instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://wa.me/553299627281" target="_blank">
+                    <img src="../whatsapp.png" alt="WhatsApp" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="sessao-mentoria fade-in">
+        <div class="container">
+            <!-- Imagem à esquerda -->
+            <div class="imagem-mentoria">
+                <img src="../Superando_a_ansiedade.jpeg" alt="Beatriz Bouzada">
+            </div>
+            
+            <!-- Texto à direita -->
+            <div class="informacoes-mentoria fade-in">
+                <h2>Superando a ansiedade</h2>
+                <p>
+                    Objetivo: Oferecer estratégias para gerenciar e reduzir a ansiedade, promovendo maior tranquilidade e controle emocional no dia a dia. Público-alvo: Pessoas que enfrentam crises de ansiedade e desejam ferramentas práticas para melhorar sua saúde mental. Formato: Individual ou em grupo, duração de 3 meses, mentoria online.
+                </p>
+                
+                <!-- Botão de contato -->
+                <a href="https://wa.me/553299627281" target="_blank" class="botao-contato">
+                    <img src="whatsapp_green.png" alt="WhatsApp" class="icone-whatsapp">
+                    Entre em contato
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class = "tabel fade-in">
+        <img src="modelo.png">
+    </div>
+
+    <div class="oq-mentoria">
+        <h2>O que é uma <span class="texto-vermelho">mentoria?</span></h2>
+        <p>
+            Na mentoria, eu atuo diretamente ao seu lado, orientando e fornecendo estratégias práticas para você atingir seus objetivos, seja na vida pessoal ou profissional. Mais do que um simples aconselhamento, a mentoria é uma parceria onde eu ajudo você a identificar metas, superar obstáculos e criar um caminho claro para o seu sucesso.
+        </p>
+        <p>
+            Ao longo das sessões online, eu vou monitorar de perto seu progresso, oferecendo suporte contínuo, ferramentas e insights personalizados. Seja em grupo ou individualmente, a minha missão é garantir que você tenha a estrutura necessária para alcançar resultados reais e transformadores.
+        </p>
+    </div>
+    
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Sobre Beatriz Bouzada</h2>
+                <p>Beatriz Bouzada é especialista em desenvolvimento pessoal, Neuropsicologia Clínica, Psicologia e mentorias que ajudam as pessoas a viverem de forma plena e equilibrada.</p>
+            </div>
+
+
+
+            <div class="footer-section links">
+                <h2>Links Rápidos</h2>
+                <ul>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="index.html">Mentorias</a></li>
+                    <li><a href="https://wa.me/553299627281">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h2>Redes Sociais</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/beatrizbouzada"><img src="../instagram.png" alt="Instagram"></a>
+                    <a href="https://wa.me/553299627281"><img src="../whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Beatriz Bouzada | Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade-in'); // Seleciona todos os elementos com a classe 'fade-in'
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible'); // Adiciona a classe 'visible' quando entra na visualização
+                        observer.unobserve(entry.target); // Para observar o elemento após a animação
+                    }
+                });
+            });
+    
+            elements.forEach(element => {
+                observer.observe(element); // Observa cada elemento
+            });
+        });
+    </script>
+</body>
+</html>
